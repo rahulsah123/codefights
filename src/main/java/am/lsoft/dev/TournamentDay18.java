@@ -28,12 +28,12 @@ public class TournamentDay18 {
 
         for (int i = 0; i < week.length; i++) {
             if (week[i].equals(startDay)) {
-                startIndex = i;
+                startIndex = i+1;
                 break;
             }
         }
 
-        return (n + startIndex) / week.length;
+        return (n + startIndex%7) / week.length;
     }
 
     static String angleType(int measure) {
